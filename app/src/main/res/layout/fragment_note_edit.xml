@@ -1,0 +1,101 @@
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:paddingStart="12dp"
+    android:paddingEnd="10dp"
+    android:paddingTop="10dp"
+    android:paddingBottom="10dp"
+
+    tools:context="com.example.ibrahim_01.notebookapp.NoteEditFragment">
+
+
+    <ImageButton
+        android:layout_width="85.33dp"
+        android:layout_height="85.33dp"
+
+        android:id="@+id/editNoteButton"
+        android:src="@drawable/imageplaceholder"
+        android:layout_alignParentTop="true"
+        android:layout_alignParentStart="true"
+        android:layout_marginEnd="15dp"/>
+    <ScrollView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:id="@+id/NoteScrollView"
+        android:layout_alignParentTop="true"
+        android:layout_alignParentEnd="true"
+        android:layout_toEndOf="@id/editNoteButton"
+        android:layout_alignBottom="@id/editNoteButton"
+        >
+
+    <EditText
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:minLines="1"
+        android:textAppearance="?android:attr/textAppearanceLarge"
+        android:id="@+id/EditNoteTitle"
+        android:inputType="text"
+
+        />
+    </ScrollView>
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Price: "
+        android:id="@+id/PriceVariableForEditDetailView"
+        android:layout_alignBottom="@+id/editNoteButton"
+        android:layout_toEndOf="@+id/editNoteButton"
+        android:textSize="20sp"
+        android:textColor="#d3702e" />
+
+    <EditText
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:id="@+id/editTextPriceValueForEditDetailView"
+        android:layout_alignBottom="@+id/PriceVariableForEditDetailView"
+        android:layout_toEndOf="@+id/PriceVariableForEditDetailView"
+        android:inputType="number" />
+
+    <ScrollView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/NoteScrollView"
+        android:id="@+id/MessageScrollView"
+        android:layout_alignParentEnd="true"
+        android:layout_alignParentStart="true"
+        android:layout_marginTop="10dp"
+        android:layout_marginStart="4dp"
+        >
+
+
+        <EditText
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:minLines="7"
+            android:id="@+id/EditNoteMessage"
+            android:textSize="18sp"
+            android:background="@null"
+            android:textColor="#000000"
+            android:inputType="textMultiLine"
+            android:gravity="top"
+
+
+
+            />
+
+    </ScrollView>
+    
+    <Button
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:id="@+id/saveNote"
+        android:text="save note"
+        android:layout_alignParentBottom="true"
+        android:layout_alignParentStart="true"
+        android:layout_alignEnd="@id/MessageScrollView"
+        />
+
+
+
+</RelativeLayout>
